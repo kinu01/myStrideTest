@@ -7,7 +7,7 @@ import AppStyles from '../../../constants/AppStyles';
 export default function Login({onSubmit}) {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [isPhoneNumberErr, setIsPhoneNumberErr] = useState(true);
-  const prefixText = useRef('+234');
+  const prefixText = useRef('+1');
 
   const formatPhoneNumber = phone => {
     const cleaned = ('' + phone).replace(/\D/g, '');

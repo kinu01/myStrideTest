@@ -7,16 +7,16 @@ import {
 import AWS from 'aws-sdk/dist/aws-sdk-react-native';
 import config from '../constants/config';
 
-AWS.config.region = 'us-east-1';
+AWS.config.region = config.region;
 
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: 'us-east-1:837500652098', // your identity pool id here
+  IdentityPoolId: config.aws_cognito_identity_pool_id,
 });
 
 const lambda = new AWS.Lambda({
   apiVersion: '2015-03-31',
-  secretAccessKey: 'ljEJ7/4ZntmKmCiOcZyHos5BGaqZksXWMvRMJg1+',
-  accessKeyId: 'AKIA4F7XNZJBGOMTJK73',
+  secretAccessKey: config.keys.secretAccessKey,
+  accessKeyId: config.keys.accessKeyId,
 });
 
 const userPool = new CognitoUserPool({

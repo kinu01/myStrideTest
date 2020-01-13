@@ -31,7 +31,7 @@ export default function SignupScreen({navigation}) {
       {Name: 'phone_number', Value: phoneNumber.current},
       {Name: 'given_name', Value: firstName},
       {Name: 'family_name', Value: lastName},
-      {Name: 'locale', Value: 'NG'},
+      {Name: 'locale', Value: 'US'},
     ];
 
     const userInfos = userFields.map(({Name, Value}) => {
